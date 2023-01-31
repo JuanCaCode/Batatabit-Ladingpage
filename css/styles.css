@@ -1,0 +1,531 @@
+/* 
+1. Posicionamiento
+2. Modelo de caja (Box Model)
+3. Tipografía
+4. Visuales
+5. Miselaneos u otros
+*/
+:root{
+/*  Colores  */
+    --bitcoin-orange: #f7931a;
+    --soft-orange: #ffe9d5;
+    --secondary-blue: #1a9af7;
+    --soft-blue: #e7f5ff;
+    --warm-black: #282623;
+    --black: #201e1c;
+    --grey: #bababa;
+    --grey-rat:#757575;
+    --off-white: #faf8f7;
+    --just-white: #fff;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+html{
+    font-size: 62.5%;
+    font-family: "DM Sans", sans-serif;
+    scroll-behavior: smooth;
+}
+/*  HEADER STYLES  */
+header{
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: 334px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+}
+header img{
+    width: 150px;
+    margin-top: 60px;
+    align-self: center;
+}
+.header__title-container{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    height: 218px;
+    margin-top: 50px;
+    align-self: center;
+}
+.header__title-container h1{
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+.header__title-container p{
+    margin-top: 25px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: var(--soft-orange);
+}
+.header__button{
+    position: absolute;
+    bottom: -20px;
+    left: calc(50% - 118px);    
+    width: 229px;
+    height: 48px;
+    display: flex;
+    align-self: center;
+    padding: 12px 16px;
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-weight:700;
+    align-items: center;
+    color: var(--black);
+    background-color: var(--off-white);
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border: none;
+    border-radius: 5px;
+}
+.header__button span{
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    margin-left: 10px;
+    background-image: url('../assets/icons/down-arrow.svg');
+}
+
+/* MAIN STYLES */
+main{
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    background-color: var(--off-white);
+}
+.main-exchange-container{
+    width: 100%;
+    height: auto;
+    padding: 80px 0 30px 0;
+    text-align: center;
+}
+.main-exchange-container  .backgroundImage{
+    width: 195px;
+    height: 195px;
+    margin:0 auto;
+    background: center / cover no-repeat url('../assets//img/Bitcoin.svg');
+    margin-bottom: 50px;
+}
+.main-exchange-container__title{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin:0 auto;
+}
+.main-exchange-container__title h2{
+    margin-bottom: 30px;
+    font-size:2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--black);
+}
+.main-exchange-container__title p{
+    margin-bottom: 30px;
+    font-size:1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: var(--grey-rat);
+}
+/* Tablas */
+.main-tables-container{
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    min-width: 320px;
+    margin:0 auto;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type:x proximity;
+}
+.main-tables-container .main-currency-table:first-child{
+    margin-left: calc(50% - 160px);
+    margin-right: calc(50% - 160px);
+}
+.main-tables-container .main-currency-table:last-child{
+    margin-right: calc(50% - 160px);
+}
+.main-currency-table{
+    width:100%;
+    min-width: 320px;
+    max-width: 400px;
+    height:360px;
+    margin:0 10px;
+    font-family: "Inter", sans-serif;
+}
+.main-currency-table .currency-table__title{
+    margin:0 0 15px 35px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--bitcoin-orange);
+    text-align: left;
+}
+.main-currency-table .currency-table__title{
+    margin:0 0 15px 35px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--bitcoin-orange);
+    text-align: left;
+}
+.currency-table__container{
+    width: 100%;
+    min-width: 320px;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.currency-table__container table{
+    width:100%;
+    height: auto;
+}
+.currency-table__container tr{
+    height: 39px;
+}
+.currency-table__container td{
+    width:50%;
+    height: 49px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    color: var(--grey);
+    background-color: var(--just-white);
+}
+.currency-table__container .table__right{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--grey-rat);
+}
+.currency-table__container .down{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: center / cover no-repeat url('../assets/icons/trending-down.svg');
+}
+.currency-table__container .up{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: center / cover no-repeat url('../assets/icons/trending-up.svg');
+}
+.currency-table__updated{
+    width: 190px;
+    height: 31px;
+    margin: 16px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--soft-orange);
+}
+.currency-table__updated p{
+    font-size: 1.2rem;
+    font-family: 'Inter', sans-serif;
+}
+.currency-table__updated span{
+    font-weight: 700;
+}
+.main-currency-table .title-comisiones{
+    color: var(--secondary-blue);
+}
+.main-currency-table .comisiones_update{
+    background-color: var(--soft-blue);
+}
+
+/* SECCION DE  BENEFICIONES*/
+.main-benefits-container{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 64px 0 30px 0;
+    text-align: center;
+    background-color: #201E1C;
+}
+.main-benefits__batata_icon{
+    position: absolute;
+    top: -19px;
+    left: calc(50% - 19px);
+    width:38px;
+    height: 38px;
+    background: center / contain no-repeat url('../assets/icons/batata.svg');
+}
+.main-benefits__title h2{
+    width: 100%;
+    min-width: 288px;
+    padding:0 16px;
+    font-size: 2.4rem;
+    color: var(--just-white);
+}
+.main-benefits__title p{
+    margin-top: 24px;
+    font-size: 1.4rem; 
+    color: #808080;
+}
+.main-benefits__articles-container{
+    width: 100%;
+    min-width: 320px;
+    max-width: 900px;
+    padding: 0 15px;
+    margin:0 auto;
+    gap:30px;
+}
+.main-benefits__articles-container article{
+    width: 100%;
+    min-width: 288px;
+    max-width: 450px;
+    text-align: left;
+    padding: 16px;
+    margin: 16px auto;
+    border-radius: 4px;
+    background: #282623;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+
+}
+.main-benefits__articles-container article .article__icon{
+    width: 20px;
+    height: 20px;
+}
+.main-benefits__articles-container article:nth-child(1) .article__icon{
+    background: center / contain no-repeat url('../assets/icons/clock.svg');
+}
+.main-benefits__articles-container article:nth-child(2) .article__icon{
+    background: center / contain no-repeat url('../assets/icons/eye.svg');
+}
+.main-benefits__articles-container article:nth-child(3) .article__icon{
+    background: center / contain no-repeat url('../assets/icons/dollar-sign.svg');
+}
+.main-benefits__articles-container article:nth-child(4) .article__icon{
+    background: center / contain no-repeat url('../assets/icons/check-circle.svg');
+}
+.main-benefits__articles-container article h3{
+    margin-top: 12px;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 18px;
+    color: var(--just-white);
+}
+.main-benefits__articles-container article p{
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 18px;
+    color: #808080;
+}
+
+/* CONOCELO SECTION */
+.image-conocelo-hoy-container{
+    width: 100%;
+    min-width: 320px;
+    padding-top: 64px;
+    height: 50vh;
+    background: center / cover no-repeat url('../assets/img/bitcoinbaby2x.jpg');
+}
+.image-conocelo-hoy-container h2{
+    width: 100%;
+    font-size: 2.4rem;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--just-white);
+}
+/* planes */
+.main-planes{
+    width: 100%;
+    height: auto;
+    padding: 80px 0 30px 0;
+    overflow: visible;
+    text-align: center;
+}
+.main-planes__titles{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin:0 auto;
+}
+.main-planes__titles h2{
+    margin-bottom: 30px;
+    font-size:2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--black);
+}
+.main-planes__titles p{
+    margin-bottom: 30px;
+    font-size:1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: var(--grey-rat);
+}
+.card-planes-container{
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 0 auto;
+    /* padding: 0 20px; */
+    overflow-x: scroll;
+    overscroll-behavior-x:contain;
+    scroll-snap-type:x proximity;
+}
+.card-planes-container article{
+    scroll-snap-align: center;
+    position: relative;
+    width: 70%;
+    max-width: 300px;
+    min-width: 190px;
+    height: auto;
+    min-height: 247px;
+    display: flex;
+    flex-flow: column;
+    margin: 50px 10px;
+    padding: 40px 10px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border-radius: 8px;
+}
+.card-planes-container article:first-child{
+    margin-left: calc(50% - 95px )
+}
+.card-planes-container article:last-child{
+    margin-right: calc(50% - 95px )
+}
+.recomendado::after{
+    content:"Recomendado";
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    top: -15px;
+    left: calc(50% - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 15px;
+    color: var(--just-white);
+    background: #F7931A;
+    border-radius: 8px;
+}
+.card-planes-container article .card__title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 18px;
+}
+.card-planes-container article .card__price{
+    position: relative;
+    margin-top: 10px auto 16px auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5.2rem;
+    line-height: 63px;
+    letter-spacing: -0.08em;
+}
+.card-planes-container article .card__price::before{
+    content: "$";
+    top: 10px;
+    left: calc(50% - 37px);
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 15px;
+    text-align: center;
+    color: var(--warm-black);
+}
+.card-planes-container article .card__description{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 15px;
+    text-align: center;
+    color: var(--grey-rat);
+}
+.card-planes-container article .calltoaction{
+    width: 150px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px auto 0px auto;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align:center;
+    line-height: 18px;
+    background-color:#FAF8F7;
+    border: 2px solid #F7931A;
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--warm-black);
+}
+.icon-arrow{
+    width: 24px;
+    height: 24px;
+    margin-left: 6px;
+    background: center / contain no-repeat url('../assets/icons/orange-right-arrow.svg');
+}
+
+footer{
+    width: 100%;
+    min-width: 320px;
+    height: 150px;
+    display: flex;
+    padding: 0 15%;
+    justify-content: center;
+    align-items: center;
+    background: #F7931A;
+}
+footer section{
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    background: #F7931A;
+}
+footer section div{
+    width:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer_list_side ul{
+    list-style: none;
+}
+footer .footer_list_side ul li{
+    margin:8px auto;
+    text-align: left;
+    font-weight: 500;
+    line-height: 18px;
+    font-size: 1.4rem;
+    color: var(--just-white);
+}
+footer .footer_icon_side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--just-white);
+}
+footer .footer_icon_side img{
+    width: 35px;
+}

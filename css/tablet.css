@@ -1,0 +1,24 @@
+.main-benefits__articles-container{
+    display: grid;
+    margin-top: 16px;
+    grid-template-columns: auto auto;
+}
+.main-benefits__articles-container article{
+    margin: 0;
+}
+.main-tables-container .main-currency-table:first-child{
+    margin-left:auto;
+    margin-right:auto;
+}
+.main-tables-container .main-currency-table:last-child{
+    margin-right:auto;
+}
+.card-planes-container article:first-child{
+    margin-left: auto;
+}
+.card-planes-container article:last-child{
+    margin-right: auto;
+}
+.card-planes-container, .main-tables-container{
+    overflow-x:unset;
+}
